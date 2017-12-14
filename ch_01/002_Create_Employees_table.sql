@@ -21,3 +21,8 @@ ALTER TABLE dbo.Employees
 ALTER TABLE dbo.Employees
 	ADD CONSTRAINT UNQ_Employees_ssn
 	UNIQUE(ssn);
+
+ALTER TABLE dbo.Employees
+	ADD CONSTRAINT FK_Emloyees_Employees
+	FOREIGN KEY(mgrid)
+	REFERENCES dbo.Employees(empid);
