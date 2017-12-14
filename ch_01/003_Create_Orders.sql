@@ -18,3 +18,7 @@ ALTER TABLE dbo.Orders
     ADD CONSTRAINT FK_Orders_Employees
     FOREIGN KEY(empid)
     REFERENCES dbo.Employees(empid);
+
+ALTER TABLE dbo.Orders
+    ADD CONSTRAINT DEF_Orders_orderts
+    DEFAULT(SYSDATETIME()) FOR orderts;
