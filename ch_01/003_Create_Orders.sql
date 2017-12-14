@@ -1,3 +1,5 @@
+USE tsql2012;
+
 IF OBJECT_ID('dbo.Orders') IS NOT NULL
     DROP TABLE dbo.Orders;
 
@@ -11,3 +13,8 @@ CREATE TABLE dbo.Orders
     CONSTRAINT PK_Orders
         PRIMARY KEY(orderid)
 );
+
+ALTER TABLE dbo.Orders
+    ADD CONSTRAINT FK_Orders_Employees
+    FOREIGN KEY(empid)
+    REFERENCES dbo.Employees(empid);
