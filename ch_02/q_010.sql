@@ -15,3 +15,11 @@ SELECT TOP (1) PERCENT
     empid
 FROM Sales.Orders
 ORDER BY orderdate DESC;
+
+SELECT TOP(5) WITH TIES
+    orderid,
+    orderdate,
+    custid,
+    empid
+FROM Sales.Orders
+ORDER BY orderdate DESC;
