@@ -26,3 +26,7 @@ ALTER TABLE dbo.Employees
 	ADD CONSTRAINT FK_Emloyees_Employees
 	FOREIGN KEY(mgrid)
 	REFERENCES dbo.Employees(empid);
+
+ALTER TABLE dbo.Employees
+	ADD CONSTRAINT CHK_Emplloyees_salary
+	CHECK(salary > 0.00);
