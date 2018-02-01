@@ -22,4 +22,12 @@ SELECT
     region,
     city
 FROM Sales.Customers
+WHERE region = NULL;
+
+SELECT
+    custid,
+    country,
+    region,
+    city
+FROM Sales.Customers
 WHERE region IS NULL;
