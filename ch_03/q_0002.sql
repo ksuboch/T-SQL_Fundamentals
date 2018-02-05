@@ -14,3 +14,5 @@ FROM            dbo.Digits AS D1
     CROSS JOIN  dbo.Digits AS D2
     CROSS JOIN  dbo.Digits AS D3
 ORDER BY n;
+
+IF OBJECT_ID('dbo.Digits', 'U') IS NOT NULL DROP TABLE dbo.Digits;
